@@ -19,12 +19,20 @@
 
 class	Contact
 {
+	private:
+		std::string	const first;
+		std::string	const last;
+		std::string	const nick;
+		std::string	const phone;
+		std::string	const sec;
 	public:
-		std::string	first;
-		std::string	last;
-		std::string	nick;
-		std::string	phone;
-		std::string	sec;
+		Contact(std::string f, std::string l, std::string n, std::string p, std::string s);
+		~Contact(void);
+		std::string getfirst(void) const;
+		std::string getlast(void) const;
+		std::string getnick(void) const;
+		std::string getphone(void) const;
+		std::string getsec(void) const;
 };
 
 #endif

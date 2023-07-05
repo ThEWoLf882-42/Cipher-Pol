@@ -19,7 +19,7 @@
 class	PhoneBook
 {
 	public:
-		Contact	con[8];
+		Contact	c[8];
 		int		n;
 };
 
