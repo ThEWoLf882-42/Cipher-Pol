@@ -3,14 +3,18 @@ NAME = phonebook
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-# INCLUDES = -I$(HEADERS_DIRECTORY)
+INCLUDES = -I$(HEADERS_DIRECTORY)
 
-# HEADERS_LIST = 
-# HEADERS_DIRECTORY = 
-# HEADERS = $(addprefix $(HEADERS_DIRECTORY), $(HEADERS_LIST))
+HEADERS_DIRECTORY = ./
+HEADERS_LIST =	Contact.hpp \
+				PhoneBook.hpp \
+
+HEADERS = $(addprefix $(HEADERS_DIRECTORY), $(HEADERS_LIST))
 
 SOURCES_DIRECTORY = ./
-SOURCES_LIST =	megaphone.cpp \
+SOURCES_LIST =	Contact.cpp \
+				main.cpp \
+				PhoneBook.cpp \
 
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
 

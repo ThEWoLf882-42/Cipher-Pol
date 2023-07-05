@@ -19,6 +19,8 @@
 class	PhoneBook
 {
 	public:
+		PhoneBook(void);
+		~PhoneBook(void);
 		Contact	c[8];
 		int		n;
 };

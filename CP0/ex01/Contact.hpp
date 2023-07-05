@@ -5,6 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/05 16:15:59 by agimi             #+#    #+#             */
+/*   Updated: 2023/07/05 16:15:59 by agimi            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 11:52:33 by agimi             #+#    #+#             */
 /*   Updated: 2023/06/26 11:52:33 by agimi            ###   ########.fr       */
 /*                                                                            */
@@ -20,19 +32,20 @@
 class	Contact
 {
 	private:
-		std::string	const first;
-		std::string	const last;
-		std::string	const nick;
-		std::string	const phone;
-		std::string	const sec;
+		std::string		first;
+		std::string		last;
+		std::string		nick;
+		std::string		phone;
+		std::string		sec;
 	public:
+		Contact(void);
 		Contact(std::string f, std::string l, std::string n, std::string p, std::string s);
 		~Contact(void);
-		std::string getfirst(void) const;
-		std::string getlast(void) const;
-		std::string getnick(void) const;
-		std::string getphone(void) const;
-		std::string getsec(void) const;
+		std::string getfirst(void);
+		std::string getlast(void);
+		std::string getnick(void);
+		std::string getphone(void);
+		std::string getsec(void);
 };
 
 #endif
