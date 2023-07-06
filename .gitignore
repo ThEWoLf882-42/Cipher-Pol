@@ -5,3 +5,4 @@ a.out
 phonebook
 .vscode
 out
+*.log
