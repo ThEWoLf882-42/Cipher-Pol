@@ -41,7 +41,9 @@ void	printstr(std::string s)
 
 void	search(PhoneBook pb)
 {
-	int	n;
+	std::string	s;
+	size_t		n;
+	std::string	d;
 	indexdis();
 	for (int i = 0; i < 8; i++)
 	{
@@ -52,12 +54,27 @@ void	search(PhoneBook pb)
 		std::cout << std::endl;
 	}
 	std::cout << ">> ";
-	std::cin >> n;
-	if (n >= 1 && n <= 8)
+	std::getline(std::cin, s);
+	try
 	{
-		std::cout << std::setw(15)<< "First name:	" << pb.c[n - 1].getfirst() << std::setw(15)<< "Last name:	" << pb.c[n - 1].getlast() << std::setw(15)<< "Nickname:	"
-			<< pb.c[n - 1].getnick() << std::setw(15)<< "Phone number:	" << pb.c[n - 1].getphone() << std::setw(15)<< "Darkest secret:	" << pb.c[n - 1].getsec() << std::endl;
+		n = std::stoi(s);
+		if (n >= 1 && n <= 8)
+		{
+			d = pb.c[n - 1].getsec();
+			d.replace(0, d.length(), d.length(), '*');
+			std::cout << std::setw(20) << "First name:	" << pb.c[n - 1].getfirst() << std::endl << std::setw(20) << "Last name:	" << pb.c[n - 1].getlast() << std::endl
+				<< std::setw(20) << "Nickname:	" << pb.c[n - 1].getnick() << std::endl << std::setw(20) << "Phone number:	" << pb.c[n - 1].getphone() << std::endl
+				<< std::setw(20) << "Darkest secret:	" << d << std::endl;
+		}
+		else
+			std::cout << "Note a valid index"<< std::endl;
 	}
+	catch(const std::invalid_argument& e)
+	{
+		std::cout << "Note a valid argument"<< std::endl;
+	}
+	
+	
 }
 
 void	add(PhoneBook *pb)
@@ -92,13 +109,13 @@ int	main()
 	std::string	s;
 
 
-	while (s != "EXIT")
+	while (s != "EXIT" && s != "e")
 	{
 		std::cout << "PLease enter a valid command:\n	ADD\n	SEARCH\n	EXIT\n>> ";
 		std::getline(std::cin, s);
-		if (s == "ADD" || s == "add")
+		if (s == "ADD" || s == "a")
 			add(&pb);
-		else if (s == "SEARCH" || s == "search" || s == "s")
+		else if (s == "SEARCH" || s == "s")
 			search(pb);
 		if (std::cin.eof())
 			break ;
