@@ -6,3 +6,4 @@ phonebook
 .vscode
 out
 *.log
+tests
