@@ -67,11 +67,11 @@ void	search(PhoneBook pb)
 				<< std::setw(20) << "Darkest secret:	" << d << std::endl;
 		}
 		else
-			std::cout << "Note a valid index"<< std::endl;
+			std::cout << "Not a valid index"<< std::endl;
 	}
 	catch(const std::invalid_argument& e)
 	{
-		std::cout << "Note a valid argument"<< std::endl;
+		std::cout << "Not a valid argument"<< std::endl;
 	}
 	
 	
@@ -85,15 +85,15 @@ void	add(PhoneBook *pb)
 	std::string	phone;
 	std::string	sec;
 
-	std::cout << "Please enter your first name >  " << std::endl;
+	std::cout << "Please enter your first name" << std::endl << "> ";
 	std::getline(std::cin, first);
-	std::cout << "Please enter your last name >  " << std::endl;
+	std::cout << "Please enter your last name" << std::endl << "> ";
 	std::getline(std::cin, last);
-	std::cout << "Please enter your nickname >  " << std::endl;
+	std::cout << "Please enter your nickname" << std::endl << "> ";
 	std::getline(std::cin, nick);
-	std::cout << "Please enter your phone number >  " << std::endl;
+	std::cout << "Please enter your phone number" << std::endl << "> ";
 	std::getline(std::cin, phone);
-	std::cout << "Please enter your darkest secret >  " << std::endl;
+	std::cout << "Please enter your darkest secret" << std::endl << "> ";
 	std::getline(std::cin, sec);
 	if (check(first, last, nick, phone, sec))
 	{
@@ -109,13 +109,13 @@ int	main()
 	std::string	s;
 
 
-	while (s != "EXIT" && s != "e")
+	while (s != "EXIT")
 	{
 		std::cout << "PLease enter a valid command:\n	ADD\n	SEARCH\n	EXIT\n>> ";
 		std::getline(std::cin, s);
-		if (s == "ADD" || s == "a")
+		if (s == "ADD")
 			add(&pb);
-		else if (s == "SEARCH" || s == "s")
+		else if (s == "SEARCH")
 			search(pb);
 		if (std::cin.eof())
 			break ;

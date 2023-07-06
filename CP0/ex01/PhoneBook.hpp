@@ -22,7 +22,7 @@ class	PhoneBook
 		PhoneBook(void);
 		~PhoneBook(void);
 		Contact	c[8];
-		int		n;
+		size_t	n;
 };
 
 #endif
