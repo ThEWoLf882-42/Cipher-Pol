@@ -3,13 +3,6 @@ NAME = brain
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-# INCLUDES = -I$(HEADERS_DIRECTORY)
-
-# HEADERS_DIRECTORY = ./
-# HEADERS_LIST =	Zombie.hpp \
-
-HEADERS = $(addprefix $(HEADERS_DIRECTORY), $(HEADERS_LIST))
-
 SOURCES_DIRECTORY = ./
 SOURCES_LIST =	main.cpp \
 
