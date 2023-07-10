@@ -14,7 +14,7 @@
 
 bool	check(std::string f, std::string l, std::string n, std::string p, std::string s)
 {
-	if(f != "" && l != "" && n != "" && p != "" && s != "")
+	if(!f.empty() && !l.empty() && !n.empty() && !p.empty() && !s.empty())
 		return (true);
 	return (false);
 }
@@ -99,7 +99,10 @@ void	add(PhoneBook *pb)
 	{
 		Contact	co(first, last, nick, phone, sec);
 		pb->c[pb->n++ % 8] = co;
+		std::cout << "	Contact added" << std::endl;
 	}
+	else
+		std::cout << "	Contact not added" << std::endl;
 	return;
 }
 
