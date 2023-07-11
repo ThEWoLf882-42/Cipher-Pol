@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 19:43:32 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/06 19:55:35 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/11 15:39:33 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,8 @@ class	Zombie
 		~Zombie(void);
 		void	announce(void);
 };
+
+Zombie*	newZombie(std::string name);
+void	randomChump(std::string name);
 
 #endif

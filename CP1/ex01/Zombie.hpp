@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 20:22:12 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/06 20:32:51 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/11 15:53:13 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,7 @@ class	Zombie
 		void	announce(void);
 		void	setName(std::string	n);
 };
+
+Zombie*	zombieHorde(int N, std::string name);
 
 #endif
