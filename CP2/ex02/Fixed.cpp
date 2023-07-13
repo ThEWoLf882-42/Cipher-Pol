@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 12:58:56 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/13 14:50:09 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/13 14:59:38 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,34 +143,22 @@ Fixed	Fixed::operator--(int)
 
 const Fixed	&Fixed::min(Fixed const &fi,Fixed const &se)
 {
-	if ((Fixed)fi <= (Fixed)se)
-		return fi;
-	else
-		return se;
+	return (Fixed)fi <= (Fixed)se ? fi : se;
 }
 
 Fixed	&Fixed::min(Fixed &fi, Fixed &se)
 {
-	if (fi <= se)
-		return fi;
-	else
-		return se;
+	return fi <= se ? fi : se;
 }
 
 const Fixed	&Fixed::max(Fixed const &fi,Fixed const &se)
 {
-	if ((Fixed)fi >= (Fixed)se)
-		return fi;
-	else
-		return se;
+	return (Fixed)fi >= (Fixed)se ? fi : se;
 }
 
 Fixed	&Fixed::max(Fixed &fi, Fixed &se)
 {
-	if (fi >= se)
-		return fi;
-	else
-		return se;
+	return fi >= se ? fi : se;
 }
 
 std::ostream	&operator<<(std::ostream &str, Fixed const &fn)
