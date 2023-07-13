@@ -31,7 +31,7 @@ RESET = \033[0m
 all: $(NAME)
 
 $(NAME): $(OBJECTS_DIRECTORY) $(OBJECTS)
-	@$(CC) $(FLAGS) $(INCLUDES) $(OBJECTS) -o $(NAME)
+	@$(CC) $(FLAGS) $(INCLUDES) $(OBJECTS) #-o $(NAME)
 	@echo "\n$(NAME): $(GREEN)$(NAME) object files were created$(RESET)"
 	@echo "$(NAME): $(GREEN)$(NAME) was created$(RESET)"
 

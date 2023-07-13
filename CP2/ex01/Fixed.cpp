@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 22:11:01 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/12 22:54:02 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/13 12:53:22 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,15 @@ Fixed::~Fixed(void)
 }
 
 Fixed::Fixed(const int f) :
-	fpn(f)
+	fpn(f << frb)
 {
 	std::cout << "Int constructor called" << std::endl;	
 }
 
 Fixed::Fixed(const float f) :
-	fpn(std::roundf(f))
+	fpn(roundf(f * (1 << frb)))
 {
-	std::cout << "Float constructor called" << std::endl;
+	std::cout << "Float constructor called" <<std::endl;
 }
 
 Fixed::Fixed(Fixed const &f)
@@ -63,12 +63,12 @@ void	Fixed::setRawBits(int const raw)
 
 float	Fixed::toFloat(void) const
 {
-	return (std::round(this->fpn));
+	return ((float)fpn / (float)(1 << frb));
 }
 
 int		Fixed::toInt(void) const
 {
-	return (std::round(this->fpn));
+	return (fpn >> frb);
 }
 
 std::ostream	&operator<<(std::ostream &str, Fixed const &fn)
