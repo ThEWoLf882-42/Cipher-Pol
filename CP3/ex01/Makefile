@@ -1,4 +1,4 @@
-NAME = claptrap
+NAME = scavtrap
 
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
@@ -7,12 +7,14 @@ INCLUDES = -I$(HEADERS_DIRECTORY)
 
 HEADERS_DIRECTORY = ./
 HEADERS_LIST =	ClapTrap.hpp \
+				ScavTrap.hpp \
 
 HEADERS = $(addprefix $(HEADERS_DIRECTORY), $(HEADERS_LIST))
 
 SOURCES_DIRECTORY = ./
 SOURCES_LIST =	ClapTrap.cpp \
 				main.cpp \
+				ScavTrap.cpp \
 
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
 

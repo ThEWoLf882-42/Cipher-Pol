@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/15 12:11:33 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/15 15:52:53 by agimi            ###   ########.fr       */
+/*   Created: 2023/07/16 13:17:49 by agimi             #+#    #+#             */
+/*   Updated: 2023/07/16 13:30:46 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
+
+# include <iostream>
 #include "ClapTrap.hpp"
 
-int	main()
+class	ScavTrap : public ClapTrap
 {
-	ClapTrap	ct("gera");
+	private:
+		bool	gkm;
+	public:
+		ScavTrap(void);
+		ScavTrap(std::string n);
+		ScavTrap(ScavTrap const &st);
+};
 
-	ct.beRepaired(1);
-	ct.attack("hary");
-	ct.takeDamage(9);
-	
-	return (0);
-}
+#endif
