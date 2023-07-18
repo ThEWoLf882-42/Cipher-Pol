@@ -1,33 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/16 13:17:49 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/18 17:22:05 by agimi            ###   ########.fr       */
+/*   Created: 2023/07/18 17:35:30 by agimi             #+#    #+#             */
+/*   Updated: 2023/07/18 17:38:30 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
-# include "ClapTrap.hpp"
-
-class	ScavTrap : public ClapTrap
+int main()
 {
-	private:
-		bool	gkm;
-	public:
-		ScavTrap(void);
-		ScavTrap(std::string n);
-		ScavTrap(ScavTrap const &st);
-		~ScavTrap(void);
-		ScavTrap	&operator=(ScavTrap const st);
-
-		void	attack(const std::string& target);
-		void	guardGate(void);
-};
-
-#endif
+	
+}
