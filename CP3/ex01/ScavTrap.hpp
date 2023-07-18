@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 13:17:49 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/18 17:22:05 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/18 19:10:00 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class	ScavTrap : public ClapTrap
 		ScavTrap(std::string n);
 		ScavTrap(ScavTrap const &st);
 		~ScavTrap(void);
-		ScavTrap	&operator=(ScavTrap const st);
+		ScavTrap	&operator=(ScavTrap const &st);
 
 		void	attack(const std::string& target);
 		void	guardGate(void);

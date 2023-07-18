@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 12:11:53 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/18 15:28:05 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/18 19:09:49 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ ClapTrap::~ClapTrap(void)
 	std::cout << "ClapTrap Destructor called" << std::endl;
 }
 
-ClapTrap	&ClapTrap::operator=(ClapTrap const ct)
+ClapTrap	&ClapTrap::operator=(ClapTrap const &ct)
 {
 	std::cout << "ClapTrap Copy assignment operator constructor called" << std::endl;
 	name = ct.name;

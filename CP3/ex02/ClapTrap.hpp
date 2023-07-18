@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 12:11:49 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/18 17:01:54 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/18 19:10:07 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class	ClapTrap
 		ClapTrap(std::string n);
 		ClapTrap(ClapTrap const &ct);
 		~ClapTrap(void);
-		ClapTrap	&operator=(ClapTrap const ct);
+		ClapTrap	&operator=(ClapTrap const &ct);
 
 		void	attack(const std::string& target);
 		void	takeDamage(unsigned int amount);

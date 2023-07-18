@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 17:25:01 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/18 17:32:29 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/18 19:10:20 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class	FragTrap : public ClapTrap
 		FragTrap(std::string n);
 		FragTrap(FragTrap const &ft);
 		~FragTrap(void);
-		FragTrap	&operator=(FragTrap const st);
+		FragTrap	&operator=(FragTrap const &st);
 
 	void	attack(const std::string& target);
 	void	highFivesGuys(void);

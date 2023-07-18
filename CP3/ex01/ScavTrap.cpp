@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 15:31:34 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/18 17:12:10 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/18 19:09:57 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ ScavTrap::~ScavTrap(void)
 	std::cout << "ScavTrap Destructor called" << std::endl;
 }
 
-ScavTrap	&ScavTrap::operator=(ScavTrap const st)
+ScavTrap	&ScavTrap::operator=(ScavTrap const &st)
 {
 	name = st.name;
 	HP = st.HP;
