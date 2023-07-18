@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 12:11:53 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/15 15:28:39 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/18 15:28:05 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,29 @@
 ClapTrap::ClapTrap(void) :
 	name("LOL"), HP(10), EP(10), AD(0)
 {
-	std::cout << "Def constructor called" << std::endl;
+	std::cout << "ClapTrap Def constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string n) :
 	name(n), HP(10), EP(10), AD(0)
 {
-	std::cout << "String constructor called" << std::endl;
+	std::cout << "ClapTrap String constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &ct)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "ClapTrap Copy constructor called" << std::endl;
 	*this = ct;
 }
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "ClapTrap Destructor called" << std::endl;
 }
 
 ClapTrap	&ClapTrap::operator=(ClapTrap const ct)
 {
-	std::cout << "Copy assignment operator constructor called" << std::endl;
+	std::cout << "ClapTrap Copy assignment operator constructor called" << std::endl;
 	name = ct.name;
 	HP = ct.HP;
 	EP = ct.EP;
@@ -77,8 +77,11 @@ void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (HP > 0 && EP > 0)
 	{
-		std::cout << "ClapTrap "<< name << " Has restored " << amount << " HP" << std::endl;
 		HP += amount;
+		if (HP > 10)
+			HP = 10;
+		std::cout << "ClapTrap "<< name << " Has restored " << amount
+				<< " HP (" << HP << "HP)" << std::endl;
 		EP--;
 	}
 	else

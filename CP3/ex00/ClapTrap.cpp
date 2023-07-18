@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 12:11:53 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/15 15:28:39 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/18 15:28:10 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,11 @@ void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (HP > 0 && EP > 0)
 	{
-		std::cout << "ClapTrap "<< name << " Has restored " << amount << " HP" << std::endl;
 		HP += amount;
+		if (HP > 10)
+			HP = 10;
+		std::cout << "ClapTrap "<< name << " Has restored " << amount
+				<< " HP (" << HP << "HP)" << std::endl;
 		EP--;
 	}
 	else
