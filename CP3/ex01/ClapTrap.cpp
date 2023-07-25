@@ -6,14 +6,14 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 12:11:53 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/18 19:09:49 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/25 16:45:33 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(void) :
-	name("LOL"), HP(10), EP(10), AD(0)
+	name("Default"), HP(10), EP(10), AD(0)
 {
 	std::cout << "ClapTrap Def constructor called" << std::endl;
 }

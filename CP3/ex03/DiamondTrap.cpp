@@ -6,28 +6,28 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 18:18:04 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/18 19:08:40 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/25 16:58:50 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(void) : ClapTrap("LOLDT_clap_name")
+DiamondTrap::DiamondTrap(void) : ClapTrap("Default_clap_name"), ScavTrap(), FragTrap()
 {
-	name = "LOLDT";
-	HP = FragTrap::HP;
-	EP = ScavTrap::EP;
-	AD = FragTrap::AD;
-	std::cout << "DiamondTrap Def constructor called" << std::endl;
+    name = "Default";
+    HP = FragTrap::HP;
+    EP = ScavTrap::EP;
+    AD = FragTrap::AD;
+    std::cout << "DiamondTrap Def constructor called" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string n) : ClapTrap(n + "_clap_name")
+DiamondTrap::DiamondTrap(std::string n) : ClapTrap(n + "_clap_name"), ScavTrap(n), FragTrap(n)
 {
-	name = n;
-	HP = FragTrap::HP;
-	EP = ScavTrap::EP;
-	AD = FragTrap::AD;
-	std::cout << "DiamondTrap String constructor called" << std::endl;
+    name = n;
+    HP = FragTrap::HP;
+    EP = ScavTrap::EP;
+    AD = FragTrap::AD;
+    std::cout << "DiamondTrap String constructor called" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(DiamondTrap const &dt) : ClapTrap(dt), ScavTrap(dt), FragTrap(dt)
@@ -43,7 +43,7 @@ DiamondTrap::~DiamondTrap(void)
 
 DiamondTrap	&DiamondTrap::operator=(DiamondTrap const &dt)
 {
-	name = dt.name + "_clap_name";
+	name = dt.name;
 	HP = dt.HP;
 	EP = dt.EP;
 	AD = dt.AD;
@@ -59,5 +59,6 @@ void	DiamondTrap::attack(const std::string& target)
 
 void	DiamondTrap::whoAmI(void)
 {
-	std::cout << "DiamondTrap name: " << name << "ClapTrap name: " << ClapTrap::name << std::endl;
+	std::cout << "DiamondTrap name: [" << name << "] ClapTrap name: [" << ClapTrap::name << "]" << std::endl;
+	std::cout << HP << " " << EP << " " << AD << std::endl;
 }

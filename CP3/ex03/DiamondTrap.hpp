@@ -6,15 +6,15 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 18:09:01 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/18 19:06:40 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/25 15:54:39 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DIAMONDTRAP_HPP
 # define DIAMONDTRAP_HPP
 
-# include "FragTrap.hpp"
 # include "ScavTrap.hpp"
+# include "FragTrap.hpp"
 
 class	DiamondTrap : public ScavTrap, public FragTrap
 {
