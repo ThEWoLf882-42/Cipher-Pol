@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 15:31:34 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/18 19:09:00 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/25 17:01:16 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,14 @@
 
 ScavTrap::ScavTrap(void) : ClapTrap()
 {
-	HP = 100;
 	EP = 50;
-	AD = 20;
 	gkm = false;
 	std::cout << "ScavTrap Def constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string n) : ClapTrap(n)
 {
-	HP = 100;
 	EP = 50;
-	AD = 20;
 	gkm = false;
 	std::cout << "ScavTrap String constructor called" << std::endl;
 }

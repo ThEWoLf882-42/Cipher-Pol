@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 17:19:53 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/18 19:08:45 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/25 17:01:31 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 FragTrap::FragTrap(void) : ClapTrap()
 {
 	HP = 100;
-	EP = 100;
 	AD = 30;
 	std::cout << "FragTrap Def constructor called" << std::endl;
 }
@@ -23,7 +22,6 @@ FragTrap::FragTrap(void) : ClapTrap()
 FragTrap::FragTrap(std::string n) : ClapTrap(n)
 {
 	HP = 100;
-	EP = 100;
 	AD = 30;
 	std::cout << "FragTrap String constructor called" << std::endl;
 }
