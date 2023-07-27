@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 17:35:30 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/25 17:14:11 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/27 13:34:23 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ int main()
 	std::cout << "\n\n### TESTING FRAGTRAP ###\n" << std::endl;
 	std::cout << "\033[34mConstructing\033[0m" << std::endl;
 	FragTrap a;
-	FragTrap b("Giga Chadd");
+	FragTrap b("Sigma");
 	FragTrap c(a);
 	a.highFivesGuys();
-	a.attack("some super random dude");
+	a.attack("random dude");
 	b.highFivesGuys();
-	b.attack("Chadd-clone");
+	b.attack("BIll clo");
 	c.highFivesGuys();
 	return (0);
 }

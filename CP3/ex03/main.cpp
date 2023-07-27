@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 18:36:25 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/25 17:11:36 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/27 13:34:29 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ int main()
 	std::cout << "\n\n### TESTING DIAMONDTRAP ###\n" << std::endl;
 	std::cout << "\033[34mConstructing\033[0m" << std::endl;
 	DiamondTrap a;
-	DiamondTrap b("Giga Chadd");
+	DiamondTrap b("Sigma");
 	DiamondTrap c(a);
 	a.whoAmI();
-	a.attack("some super random dude");
+	a.attack("random dude");
 	b.whoAmI();
-	b.attack("Chadd-clone");
+	b.attack("BIll clo");
 	c.whoAmI();
 	return (0);
 }

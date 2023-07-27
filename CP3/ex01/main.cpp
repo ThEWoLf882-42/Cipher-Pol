@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 17:12:50 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/25 17:13:22 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/27 13:33:33 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ int main()
 	std::cout << "\n\n### TESTING SCAVTRAP ###\n" << std::endl;
 	std::cout << "\033[34mConstructing\033[0m" << std::endl;
 	ScavTrap a;
-	ScavTrap b("Giga Chadd");
+	ScavTrap b("Sigma");
 	ScavTrap c(a);
 	a.guardGate();
-	a.attack("some super random dude");
+	a.attack("random dude");
 	b.guardGate();
-	b.attack("Chadd-clone");
+	b.attack("BIll clo");
 	c.guardGate();
 	return (0);
 }
