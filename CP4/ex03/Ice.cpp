@@ -6,22 +6,22 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 18:49:02 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/26 18:51:06 by agimi            ###   ########.fr       */
+/*   Updated: 2023/07/27 12:39:12 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
 Ice::Ice(void) :
-	type("Ice")
+	type("ice")
 {
 	std::cout << "Ice Default Constructor called" << std::endl;
 }
 
-Ice::Ice(Ice const &ic)
+Ice::Ice(Ice const &ic) :
+	type(ic.getType())
 {
 	std::cout << "Ice Copy Constructor called" << std::endl;
-	*this = ic;
 }
 
 Ice::~Ice(void)
@@ -48,6 +48,6 @@ Ice	*Ice::clone() const
 
 void	Ice::use(ICharacter& target)
 {
-	std::cout << "Ice: \"* shoots an ice bolt at " << target.getName() 
-		<< " *\"" << std::endl;
+	std::cout << "* shoots an ice bolt at " << target.getName() 
+		<< " *" << std::endl;
 }
