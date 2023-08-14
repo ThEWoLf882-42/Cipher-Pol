@@ -6,13 +6,15 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 12:56:59 by agimi             #+#    #+#             */
-/*   Updated: 2023/08/14 14:57:16 by agimi            ###   ########.fr       */
+/*   Updated: 2023/08/14 14:58:52 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 # include <iostream>
+
+class Form;
 
 class Bureaucrat
 {
@@ -31,6 +33,7 @@ class Bureaucrat
 
 		void	incGrade(void);
 		void	decGrade(void);
+		void	signForm(Form &f);
 		
 		class	GradeTooHighException : public std::exception
 		{
