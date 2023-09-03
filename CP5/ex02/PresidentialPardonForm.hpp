@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 15:34:24 by agimi             #+#    #+#             */
-/*   Updated: 2023/08/14 15:54:41 by agimi            ###   ########.fr       */
+/*   Updated: 2023/08/16 14:22:05 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,6 @@ class	PresidentialPardonForm : public AForm
 		PresidentialPardonForm(PresidentialPardonForm const &p);
 		~PresidentialPardonForm(void);
 		PresidentialPardonForm	&operator=(PresidentialPardonForm const &p);
+
+		void	
 };

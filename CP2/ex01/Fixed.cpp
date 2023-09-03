@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 22:11:01 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/13 12:53:22 by agimi            ###   ########.fr       */
+/*   Updated: 2023/08/15 14:43:52 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Fixed::Fixed(const int f) :
 Fixed::Fixed(const float f) :
 	fpn(roundf(f * (1 << frb)))
 {
-	std::cout << "Float constructor called" <<std::endl;
+	std::cout << "Float constructor called" << std::endl;
 }
 
 Fixed::Fixed(Fixed const &f)

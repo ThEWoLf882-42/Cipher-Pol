@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 12:57:07 by agimi             #+#    #+#             */
-/*   Updated: 2023/08/14 14:01:30 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/03 12:54:28 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int main(void)
 	{
 		try
 		{
-			Bureaucrat jim("Gimi", 151);
-			std::cout << jim << std::endl;
+			Bureaucrat gim("Gimi", 151);
+			std::cout << gim << std::endl;
 		}
 		catch (std::exception &e)
 		{
