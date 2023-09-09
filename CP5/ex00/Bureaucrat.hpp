@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 12:56:59 by agimi             #+#    #+#             */
-/*   Updated: 2023/08/14 14:57:16 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/09 11:02:59 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ class Bureaucrat
 {
 	private:
 		const std::string	name;
-		int		gra;
+		int					gra;
 	public:
 		Bureaucrat(void);
 		Bureaucrat(const std::string n, int g);
