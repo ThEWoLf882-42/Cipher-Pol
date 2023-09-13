@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 14:03:54 by agimi             #+#    #+#             */
-/*   Updated: 2023/08/14 15:19:52 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/13 15:10:10 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,11 @@ const char	*AForm::GradeTooHighException::what(void) const throw()
 const char	*AForm::GradeTooLowException::what(void) const throw()
 {
 	return "Grade Too Low";
+}
+
+const char	*AForm::FormNotSignedException::what(void) const throw()
+{
+	return "Form not signed";
 }
 
 std::ostream	&operator<<(std::ostream &str, AForm const &f)

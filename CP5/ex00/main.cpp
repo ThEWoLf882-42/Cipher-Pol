@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 12:57:07 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/03 12:54:28 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/11 11:30:54 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int main(void)
 	{
 		try
 		{
-			Bureaucrat mike("Halim", 0);
-			std::cout << mike << std::endl;
+			Bureaucrat rach("Rachid", 0);
+			std::cout << rach << std::endl;
 		}
 		catch (std::exception &e)
 		{
@@ -42,17 +42,17 @@ int main(void)
 
 	std::cout << "\n --------------------- \n\n";
 	
-	{	
+	{
 		try 
 		{
-			Bureaucrat dur("Sidqi", 3);
-			std::cout << dur << std::endl;
-			dur.incGrade();
-			std::cout << dur << std::endl;
-			dur.incGrade();
-			std::cout << dur << std::endl;
-			dur.incGrade();
-			std::cout << dur << std::endl;
+			Bureaucrat sid("Sidqi", 3);
+			std::cout << sid << std::endl;
+			sid.incGrade();
+			std::cout << sid << std::endl;
+			sid.incGrade();
+			std::cout << sid << std::endl;
+			sid.incGrade();
+			std::cout << sid << std::endl;
 		}
 		catch (std::exception &e)
 		{
@@ -62,17 +62,17 @@ int main(void)
 
 	std::cout << "\n --------------------- \n\n";
 
-	{	
-		try 
+	{
+		try
 		{
-			Bureaucrat alan("Zakaria", 149);
-			std::cout << alan << std::endl;
-			alan.decGrade();
-			std::cout << alan << std::endl;
-			alan.decGrade();
-			std::cout << alan << std::endl;
-			alan.decGrade();
-			std::cout << alan << std::endl;
+			Bureaucrat zak("Zakaria", 149);
+			std::cout << zak << std::endl;
+			zak.decGrade();
+			std::cout << zak << std::endl;
+			zak.decGrade();
+			std::cout << zak << std::endl;
+			zak.decGrade();
+			std::cout << zak << std::endl;
 		}
 		catch (std::exception &e)
 		{

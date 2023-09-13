@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 14:04:00 by agimi             #+#    #+#             */
-/*   Updated: 2023/08/16 14:25:40 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/13 15:08:54 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 class	AForm
 {
-	private:
+	protected:
 		const std::string	name;
 		bool				issig;
 		const int 			sgra;
@@ -45,6 +45,11 @@ class	AForm
 		{
 			public:
 				const char	*what(void) const throw();
+		};
+		class	FormNotSignedException : public std::exception
+		{
+			public:
+				char const	*what(void) const throw();
 		};
 };
 
