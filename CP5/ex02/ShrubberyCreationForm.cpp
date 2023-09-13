@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 15:08:41 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/13 15:33:38 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/13 15:35:02 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 			std::cout << "Can't open " << target + "_shrubbery" << std::endl;
 			return ;
 		}
-		out << TREE;
+		out << FUCK;
 		out.close();
 		std::cout << executor.getName() << " successfully created a shrubbery" << std::endl;
 	}
