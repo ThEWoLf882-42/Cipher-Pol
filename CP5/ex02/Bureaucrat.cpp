@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 12:56:46 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/11 12:01:34 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/13 15:40:06 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ Bureaucrat::~Bureaucrat(void)
 {
 }
 
-Bureaucrat	&Bureaucrat::operator=(Bureaucrat const &b) :
-	name(b.name)
+Bureaucrat	&Bureaucrat::operator=(Bureaucrat const &b)
 {
+	(std::string)name = (std::string)b.name;
 	gra = b.gra;
 	return *this;
 }

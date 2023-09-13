@@ -1,4 +1,4 @@
-NAME = form execute
+NAME = form_execute
 
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
