@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 14:03:54 by agimi             #+#    #+#             */
-/*   Updated: 2023/08/14 19:55:23 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/14 12:33:05 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ bool	Form::getisSigned(void) const
 
 void	Form::beSigned(Bureaucrat &b)
 {
-	if (b.getGrade() < sgra)
+	if (b.getGrade() <= sgra)
 		issig = true;
 	else
 		throw Form::GradeTooLowException();

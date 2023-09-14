@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 15:08:41 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/14 11:29:03 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/14 12:39:46 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,6 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 		out.close();
 		std::cout << executor.getName() << " successfully created a shrubbery" << std::endl;
 	}
-}
-
-AForm	*ShrubberyCreationForm::makeForm(std::string const &ta)
-{
-	return	new ShrubberyCreationForm(ta);
 }
 
 std::ostream	&operator<<(std::ostream &str, ShrubberyCreationForm const &f)

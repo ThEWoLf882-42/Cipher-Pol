@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 15:34:27 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/14 11:27:40 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/14 12:39:24 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,6 @@ void	PresidentialPardonForm::execute(Bureaucrat const & executor) const
 		std::cout << executor.getName() << " executes form: " << name << std::endl;
 		std::cout << target << " has been pardoned by Zafod Beeblebrox" << std::endl;
 	}
-}
-
-AForm	*PresidentialPardonForm::makeForm(std::string const &ta)
-{
-	return	new PresidentialPardonForm(ta);
 }
 
 std::ostream	&operator<<(std::ostream &str, PresidentialPardonForm const &f)

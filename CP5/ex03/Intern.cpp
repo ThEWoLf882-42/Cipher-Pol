@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 11:04:27 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/14 11:55:13 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/14 12:39:13 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,17 @@ Intern	&Intern::operator=(Intern const &i)
 
 AForm	*Intern::makePre(std::string const &ta)
 {
-	return	PresidentialPardonForm::makeForm(ta);
+	return	new PresidentialPardonForm(ta);
 }
 
 AForm	*Intern::makeRob(std::string const &ta)
 {
-	return	RobotomyRequestForm::makeForm(ta);
+	return	new	RobotomyRequestForm(ta);
 }
 
 AForm	*Intern::makeShru(std::string const &ta)
 {
-	return	ShrubberyCreationForm::makeForm(ta);
+	return	new ShrubberyCreationForm(ta);
 }
 
 AForm	*Intern::makeForm(std::string const &ty, std::string const &ta)

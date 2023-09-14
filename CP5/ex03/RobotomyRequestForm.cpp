@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:16:51 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/14 11:28:37 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/14 12:39:36 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,6 @@ void	RobotomyRequestForm::execute(Bureaucrat const & executor) const
 		else
 			std::cout << target << "'s robotomization failed" << std::endl;
 	}
-}
-
-AForm	*RobotomyRequestForm::makeForm(std::string const &ta)
-{
-	return	new RobotomyRequestForm(ta);
 }
 
 std::ostream	&operator<<(std::ostream &str, RobotomyRequestForm const &f)

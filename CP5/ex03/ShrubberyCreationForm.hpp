@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 15:08:35 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/14 11:45:36 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/14 12:39:51 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ class	ShrubberyCreationForm : public AForm
 		ShrubberyCreationForm const	&operator=(ShrubberyCreationForm const &p);
 
 		void	execute(Bureaucrat const & executor) const;
-		static AForm	*makeForm(std::string const &ta);
 };
 
 std::ostream	&operator<<(std::ostream &str, ShrubberyCreationForm const &f);

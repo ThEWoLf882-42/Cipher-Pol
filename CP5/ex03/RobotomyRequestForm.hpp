@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:16:41 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/14 11:45:27 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/14 12:39:40 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ class	RobotomyRequestForm : public AForm
 		RobotomyRequestForm const	&operator=(RobotomyRequestForm const &p);
 
 		void			execute(Bureaucrat const & executor) const;
-		static AForm	*makeForm(std::string const &ta);
 };
 
 std::ostream	&operator<<(std::ostream &str, RobotomyRequestForm const &f);
