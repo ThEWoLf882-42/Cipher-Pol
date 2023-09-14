@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:16:51 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/13 15:22:08 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/14 10:31:52 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,6 @@ void	RobotomyRequestForm::execute(Bureaucrat const & executor) const
 
 std::ostream	&operator<<(std::ostream &str, RobotomyRequestForm const &f)
 {
-	return	str << f.getName() << " form, signed: " << f.getisSigned()
+	return	str << f.getName() << " form, signed: " << (f.getisSigned() ? "\033[32mSigned\033[0m" : "\033[35mNot Signed\033[0m")
 	<< ", sign grade: " << f.getsGrade() << ", exec grade: " << f.geteGrade();
 }

@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:36:45 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/13 15:38:02 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/14 10:55:54 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,24 +18,24 @@ int main(void)
 {
 	/* Create the 3 forms and some Bureaucrats */
 
-	ShrubberyCreationForm shrubbery("Home");
-	RobotomyRequestForm robotomy("Morty");
-	PresidentialPardonForm pardon("Rick Sanchez");
-	Bureaucrat mike("Mike", 150);
-	Bureaucrat jon("Jon", 120);
-	Bureaucrat steve("Steve", 3);
+	ShrubberyCreationForm shrubbery("1337");
+	RobotomyRequestForm robotomy("SWG");
+	PresidentialPardonForm pardon("AMBER");
+	Bureaucrat ay("Aymane", 150);
+	Bureaucrat zak("Zakaria", 120);
+	Bureaucrat rach("Rachid", 3);
 	
 	/* Try to execute forms without being signed */
 	{
 		try
 		{
-			std::cout << mike << std::endl;
+			std::cout << ay << std::endl;
 			std::cout << shrubbery << std::endl;
 			std::cout << robotomy << std::endl;
 			std::cout << pardon << std::endl;
-			mike.executeForm(shrubbery);
-			mike.executeForm(robotomy);
-			mike.executeForm(pardon);
+			ay.executeForm(shrubbery);
+			ay.executeForm(robotomy);
+			ay.executeForm(pardon);
 		}
 		catch (std::exception &e)
 		{
@@ -49,13 +49,13 @@ int main(void)
 	{
 		try
 		{
-			std::cout << mike << std::endl;
-			std::cout << jon << std::endl;
+			std::cout << ay << std::endl;
+			std::cout << zak << std::endl;
 			std::cout << shrubbery << std::endl;
 			std::cout << robotomy << std::endl;
 			std::cout << pardon << std::endl;
-			shrubbery.beSigned(jon);
-			mike.executeForm(shrubbery);
+			zak.signForm(shrubbery);
+			ay.executeForm(shrubbery);
 		}
 		catch (std::exception &e)
 		{
@@ -69,18 +69,18 @@ int main(void)
 	{
 		try
 		{
-			robotomy.beSigned(steve);
-			pardon.beSigned(steve);
+			rach.signForm(robotomy);
+			rach.signForm(pardon);
 			std::cout << shrubbery << std::endl;
 			std::cout << robotomy << std::endl;
 			std::cout << pardon << std::endl;
 			
 			std::cout << "\n --------------------- \n\n";
-			steve.executeForm(shrubbery);
+			rach.executeForm(shrubbery);
 			std::cout << "\n --------------------- \n\n";
-			steve.executeForm(robotomy);
+			rach.executeForm(robotomy);
 			std::cout << "\n --------------------- \n\n";
-			steve.executeForm(pardon);
+			rach.executeForm(pardon);
 		}
 		catch (std::exception &e)
 		{

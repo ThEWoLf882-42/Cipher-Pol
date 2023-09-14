@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 15:08:41 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/13 15:35:02 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/14 10:31:28 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 			std::cout << "Can't open " << target + "_shrubbery" << std::endl;
 			return ;
 		}
-		out << FUCK;
+		out << TR;
 		out.close();
 		std::cout << executor.getName() << " successfully created a shrubbery" << std::endl;
 	}
@@ -61,6 +61,6 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 
 std::ostream	&operator<<(std::ostream &str, ShrubberyCreationForm const &f)
 {
-	return	str << f.getName() << " form, signed: " << f.getisSigned()
+	return	str << f.getName() << " form, signed: " << (f.getisSigned() ? "\033[32mSigned\033[0m" : "\033[35mNot Signed\033[0m")
 	<< ", sign grade: " << f.getsGrade() << ", exec grade: " << f.geteGrade();
 }
