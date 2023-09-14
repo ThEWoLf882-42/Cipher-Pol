@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:36:45 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/14 12:03:02 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/14 12:50:01 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,26 @@ int main(void)
 
 	// Test some Actions with available form
 	std::cout << "------------------------------------" << std::endl;
-	form = q.makeForm("shrubbery creation", "Penny");
-	ay.signForm(*form);
-	ay.executeForm(*form);
-	delete form;
+	try
+	{
+		form = q.makeForm("robotomy request", "Penny");
+		ay.signForm(*form);
+		ay.executeForm(*form);
+		delete form;
+	}
+	catch (std::exception &e)
+		{std::cout << "Caught exception: " << e.what() << std::endl;}
+	
 	std::cout << "\n------------------------------------" << std::endl;
-	form = q.makeForm("presidential pardon", "Kady");
-	ay.signForm(*form);
-	ay.executeForm(*form);
-	delete form;
+
+	try
+	{
+		form = q.makeForm("presidential pardon", "Kady");
+		ay.signForm(*form);
+		ay.executeForm(*form);
+		delete form;
+	}
+	catch (std::exception &e)
+		{std::cout << "Caught exception: " << e.what() << std::endl;}
 	return (0);
 }
