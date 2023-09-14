@@ -34,7 +34,7 @@ GREEN = \033[0;32m
 RED = \033[0;31m
 RESET = \033[0m
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re sclean
 
 all: $(NAME)
 
@@ -64,3 +64,6 @@ fclean: clean
 re:
 	@$(MAKE) fclean
 	@$(MAKE) all
+
+sclean:
+	@rm -f *_shrubbery
