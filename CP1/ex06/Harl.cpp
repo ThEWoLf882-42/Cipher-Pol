@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 19:19:14 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/08 20:50:10 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/14 11:55:20 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,4 @@ void	Harl::complain(std::string level)
 		if (level == selection[i])
 			(this->*l[i])();
 	}
-	
 }
