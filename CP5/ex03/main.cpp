@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:36:45 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/14 12:50:01 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/14 12:51:33 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int main(void)
 	std::cout << "------------------------------------" << std::endl;
 	try
 	{
-		form = q.makeForm("robotomy request", "Penny");
+		form = q.makeForm("shrubbery creation", "Penny");
 		ay.signForm(*form);
 		ay.executeForm(*form);
 		delete form;
