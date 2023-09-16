@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 11:03:36 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/16 13:10:05 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 13:15:30 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	ScalarConverter::s_char(std::string const &in)
 	if (t == "char")
 	{
 		if(std::isprint(in.front()))
-			std::cout << static_cast<char>(in.front()) << std::endl;
+			std::cout << "'" << static_cast<char>(in.front()) << "'" << std::endl;
 		else
 			std::cout << "Non displayable" << std::endl;
 		return ;
@@ -88,7 +88,7 @@ void	ScalarConverter::s_char(std::string const &in)
 		return ;
 	}
 	else if(std::isprint(d))
-		std::cout  << static_cast<char>(d) << std::endl;
+		std::cout  << "'" << static_cast<char>(d) << "'" << std::endl;
 	else
 		std::cout << "Non displayable" << std::endl;
 }
