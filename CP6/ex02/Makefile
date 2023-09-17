@@ -15,9 +15,6 @@ HEADERS = $(addprefix $(HEADERS_DIRECTORY), $(HEADERS_LIST))
 
 SOURCES_DIRECTORY = ./
 SOURCES_LIST =	Base.cpp \
-				A.cpp \
-				B.cpp \
-				C.cpp \
 				main.cpp \
 
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))

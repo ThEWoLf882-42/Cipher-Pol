@@ -1,23 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Base.hpp                                           :+:      :+:    :+:   */
+/*   Base.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/17 10:45:39 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/17 11:28:21 by agimi            ###   ########.fr       */
+/*   Created: 2023/09/17 11:20:50 by agimi             #+#    #+#             */
+/*   Updated: 2023/09/17 11:21:14 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Base.hpp"
 
-#include <iostream>
-#include <ctime>
-#include <cstdlib>
-
-class	Base
+Base::~Base()
 {
-	public:
-		virtual	~Base();
-};
+}

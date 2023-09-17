@@ -34,3 +34,4 @@ intern
 convert
 *.back*
 serialize
+identify
