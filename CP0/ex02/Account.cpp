@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 12:50:40 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/06 16:45:17 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,13 +87,13 @@ bool	Account::makeWithdrawal(int withdrawal)
 		Account::_displayTimestamp();
 		std::cout << "index:" << _accountIndex << ";p_amount:" << pam << ";withdrawal:"
 			<< withdrawal << ";amount:" << _amount << ";nb_withdrawals:" << _nbWithdrawals << std::endl;
-		return (true);
+		return	(true);
 	}
 	else
 	{
 		Account::_displayTimestamp();
 		std::cout << "index:" << _accountIndex << ";p_amount:" << _amount << ";withdrawal:refused" << std::endl;
-		return (false);
+		return	(false);
 	}
 }
 

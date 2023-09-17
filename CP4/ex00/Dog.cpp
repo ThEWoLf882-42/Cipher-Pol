@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 10:23:47 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/26 10:48:31 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Dog	&Dog::operator=(Dog const &d)
 {
 	std::cout << "Dog Assignation operator called" << std::endl;
 	type = d.type;
-	return *this;
+	return	*this;
 }
 
 void	Dog::makeSound(void) const

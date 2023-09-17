@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 10:42:00 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/26 16:01:21 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Cat	&Cat::operator=(Cat const &c)
 	type = c.type;
 	br = new Brain();
 	*br = *c.br;
-	return *this;
+	return	*this;
 }
 
 void	Cat::makeSound(void) const

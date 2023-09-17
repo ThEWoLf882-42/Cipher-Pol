@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 18:37:03 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/27 12:38:52 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Cure::~Cure(void)
 Cure	&Cure::operator=(Cure const &cu)
 {
 	type = cu.type;
-	return *this;
+	return	*this;
 }
 
 std::string	const & Cure::getType() const

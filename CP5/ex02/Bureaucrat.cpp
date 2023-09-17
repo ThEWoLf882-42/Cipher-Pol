@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 12:56:46 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/13 15:40:06 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,17 @@ Bureaucrat	&Bureaucrat::operator=(Bureaucrat const &b)
 {
 	(std::string)name = (std::string)b.name;
 	gra = b.gra;
-	return *this;
+	return	*this;
 }
 
 const std::string	Bureaucrat::getName(void) const
 {
-	return name;
+	return	name;
 }
 
 int	Bureaucrat::getGrade(void) const
 {
-	return gra;
+	return	gra;
 }
 
 void	Bureaucrat::incGrade(void)
@@ -96,15 +96,15 @@ void	Bureaucrat::executeForm(AForm const & f)
 
 const char	*Bureaucrat::GradeTooHighException::what(void) const throw()
 {
-	return "Grade Too High";
+	return	"Grade Too High";
 }
 
 const char	*Bureaucrat::GradeTooLowException::what(void) const throw()
 {
-	return "Grade Too Low";
+	return	"Grade Too Low";
 }
 
 std::ostream	&operator<<(std::ostream &str, Bureaucrat const &b)
 {
-	return str << b.getName() << "'s Grade: " << b.getGrade();
+	return	str << b.getName() << "'s Grade: " << b.getGrade();
 }

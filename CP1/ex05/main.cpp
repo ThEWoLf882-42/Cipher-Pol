@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 19:49:44 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/08 20:08:44 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ int	main(void)
 	h.complain("WARNING");
 	h.complain("ERROR");
 	h.complain("TEST");
-	return (0);
+	return	(0);
 }

@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 15:34:27 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/14 12:39:24 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ PresidentialPardonForm const	&PresidentialPardonForm::operator=(PresidentialPard
 {
 	AForm::operator=(p);
 	target = p.target;
-	return *this;
+	return	*this;
 }
 
 void	PresidentialPardonForm::execute(Bureaucrat const & executor) const

@@ -15,8 +15,8 @@
 bool	check(std::string f, std::string l, std::string n, std::string p, std::string s)
 {
 	if(!f.empty() && !l.empty() && !n.empty() && !p.empty() && !s.empty())
-		return (true);
-	return (false);
+		return	(true);
+	return	(false);
 }
 
 void	indexdis(void)

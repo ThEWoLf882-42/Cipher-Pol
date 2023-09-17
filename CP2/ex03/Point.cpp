@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 15:05:57 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/14 16:10:15 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Point	&Point::operator=(Point const &point)
     (Fixed&)(x) = point.getX();
     (Fixed&)(y) = point.getY();
     
-    return *this;
+    return	*this;
 }
 
 Point::~Point(void)

@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 15:31:34 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/18 19:10:25 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ ScavTrap	&ScavTrap::operator=(ScavTrap const &st)
 	AD = st.AD;
 	std::cout << "ScavTrap Copy assignment operator constructor called" << std::endl;
 	
-	return *this;
+	return	*this;
 }
 
 void	ScavTrap::attack(const std::string& target)

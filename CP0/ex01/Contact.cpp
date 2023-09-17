@@ -27,22 +27,22 @@ Contact::~Contact()
 
 std::string	Contact::getfirst()
 {
-	return this->first;
+	return	this->first;
 }
 
 std::string	Contact::getlast()
 {
-	return this->last;
+	return	this->last;
 }
 
 std::string	Contact::getnick()
 {
-	return this->nick;
+	return	this->nick;
 }
 
 std::string	Contact::getphone()
 {
-	return this->phone;
+	return	this->phone;
 }
 
 std::string	Contact::getsec()

@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 12:11:53 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/25 16:45:33 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ ClapTrap	&ClapTrap::operator=(ClapTrap const &ct)
 	EP = ct.EP;
 	AD = ct.AD;
 	
-	return *this;
+	return	*this;
 }
 
 void	ClapTrap::attack(const std::string& target)

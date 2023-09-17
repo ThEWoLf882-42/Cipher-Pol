@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 17:19:53 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/18 19:10:14 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ FragTrap	&FragTrap::operator=(FragTrap const &st)
 	AD = st.AD;
 	std::cout << "FragTrap Copy assignment operator constructor called" << std::endl;
 	
-	return *this;
+	return	*this;
 }
 
 void	FragTrap::attack(const std::string& target)

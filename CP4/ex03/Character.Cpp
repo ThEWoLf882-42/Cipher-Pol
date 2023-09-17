@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Character.Cpp                                      :+:      :+:    :+:   */
+/*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 17:58:27 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/27 12:55:02 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,14 @@ void	Character::equip(AMateria* m)
 	if(!m)
 	{
 		std::cout << "Nothing to equip" << std::endl;
-		return ;
+		return	;
 	}
 	while (inv[++i] && i < 4)
 		;
 	if (i >= 4)
 	{
 		std::cout << "No slot available" << std::endl;
-		return ;
+		return	;
 	}
 	inv[i] = m;
 	std::cout << "Equipped materia " << m->getType() 
@@ -91,7 +91,7 @@ void	Character::use(int idx, ICharacter& target)
 	if (idx < 0 || idx >= 4 || !inv[idx])
 	{
 		std::cout << "Nothing to use in slot[" << idx << "]" << std::endl;
-		return ;
+		return	;
 	}
 	std::cout << getName() << ": ";
 	inv[idx]->use(target);

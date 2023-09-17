@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 16:28:06 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/31 09:58:46 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ AMateria::~AMateria(void)
 AMateria	&AMateria::operator=(AMateria const &am)
 {
 	type = am.type;
-	return *this;
+	return	*this;
 }
 
 std::string	const & AMateria::getType() const

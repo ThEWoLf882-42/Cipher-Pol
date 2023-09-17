@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:16:51 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/14 12:39:36 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ RobotomyRequestForm const	&RobotomyRequestForm::operator=(RobotomyRequestForm co
 {
 	AForm::operator=(p);
 	target = p.target;
-	return *this;
+	return	*this;
 }
 
 void	RobotomyRequestForm::execute(Bureaucrat const & executor) const

@@ -32,7 +32,7 @@ WrongAnimal	&WrongAnimal::operator=(WrongAnimal const &a)
 {
 	std::cout << "WrongAnimal Assignation operator called" << std::endl;
 	type = a.type;
-	return *this;
+	return	*this;
 }
 
 void	WrongAnimal::makeSound(void) const

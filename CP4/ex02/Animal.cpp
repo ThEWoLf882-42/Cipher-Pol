@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 10:13:45 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/26 16:18:58 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Animal	&Animal::operator=(Animal const &a)
 {
 	std::cout << "Animal Assignation operator called" << std::endl;
 	type = a.type;
-	return *this;
+	return	*this;
 }
 
 void	Animal::makeSound(void) const

@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 10:56:38 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/26 11:30:42 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ WrongCat	&WrongCat::operator=(WrongCat const &c)
 {
 	std::cout << "WrongCat Assignation operator called" << std::endl;
 	type = c.type;
-	return *this;
+	return	*this;
 }
 
 void	WrongCat::makeSound(void) const

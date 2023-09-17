@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 16:30:20 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/31 10:30:53 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,7 +127,7 @@
 // 	std::cout << "LEAKS:" << std::endl;
 // 	std::cout << "-----------------------" << std::endl;
 // 	system("leaks interface");
-// 	return (0);
+// 	return	(0);
 // }
 
 void	test()
@@ -160,5 +160,5 @@ int main()
 	std::cout << std::endl << "-----------------------" << std::endl;
 	system("leaks interface");
 	
-	return 0;
+	return	0;
 }

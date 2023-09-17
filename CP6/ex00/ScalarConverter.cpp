@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 11:03:36 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/16 13:15:30 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 16:46:21 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,163 +33,125 @@ ScalarConverter	&ScalarConverter::operator=(ScalarConverter const &s)
 	return	*this;
 }
 
-void	ScalarConverter::convert(std::string &in)
-{
-	char	*s;
-
-	std::strtod(in.c_str(), &s);
-	
-	if (*s && in.length() == 1)
-		t = "char";
-	else if (!*s)
-		t = "int";
-	else if (in.back() == 'f')
-	{
-		in.erase(in.size() - 1);
-		t = "float";
-	}
-	else
-		t = "double";
-	std::cout << std::fixed << std::setprecision((in.find('.') != std::string::npos) ? in.length() - in.find('.') - 1 : 1);
-	s_char(in);
-	s_int(in);
-	s_float(in);
-	s_double(in);
-}
-
-void	ScalarConverter::s_char(std::string const &in)
-{
-	char	*s;
-	double	d;
-
+void	ScalarConverter::convert(std::string const &in) {
 	std::cout << "char: ";
-	if (in == "nan" || in == "nanf")
+	try
 	{
-		std::cout << "impossible" << std::endl;
-		return ;
-	}
-	if (t == "char")
-	{
-		if(std::isprint(in.front()))
-			std::cout << "'" << static_cast<char>(in.front()) << "'" << std::endl;
+		char c = s_char(in);
+		if (std::isprint(c))
+			std::cout << "'" << c << "'" << std::endl;
 		else
 			std::cout << "Non displayable" << std::endl;
-		return ;
 	}
-	d = std::strtod(in.c_str(), &s);
-	if (*s)
+	catch (const std::exception& e)
 	{
 		std::cout << "impossible" << std::endl;
-		return ;
 	}
-	if(d > CHAR_MAX || d < CHAR_MIN)
-	{
-		std::cout << "impossible" << std::endl;
-		return ;
-	}
-	else if(std::isprint(d))
-		std::cout  << "'" << static_cast<char>(d) << "'" << std::endl;
-	else
-		std::cout << "Non displayable" << std::endl;
-}
-
-void	ScalarConverter::s_int(std::string const &in)
-{
-	char	*s;
-	double	d;
 
 	std::cout << "int: ";
-	if (in == "nan" || in == "nanf")
+	try
+	{
+		int i = s_int(in);
+		std::cout << i << std::endl;
+	}
+	catch (const std::exception& e)
 	{
 		std::cout << "impossible" << std::endl;
-		return ;
 	}
-	if(t == "char")
-	{
-		std::cout << static_cast<int>(in.front()) << std::endl;
-		return ;
-	}
-	d = std::strtod(in.c_str(), &s);
-	if (*s)
-	{
-		std::cout << "impossible" << std::endl;
-		return ;
-	}
-	if(d > INT_MAX || d < INT_MIN)
-	{
-		std::cout << "impossible" << std::endl;
-		return ;
-	}
-	else
-		std::cout << static_cast<int>(d) << std::endl;
-}
 
-void	ScalarConverter::s_float(std::string const &in)
-{
-	char	*s;
-	double	d;
-	
 	std::cout << "float: ";
-	if (in == "nan" || in == "nanf")
+	try
 	{
-		std::cout << "nanf" << std::endl;
-		return ;
+		float f = s_float(in);
+		std::cout << std::fixed << std::setprecision(getPrecision(in)) << f << "f" << std::endl;
 	}
-	if (t == "char")
+	catch (const std::exception& e)
 	{
-		std::cout << static_cast<float>(in.front()) << "f" << std::endl;
-		return ;
+		std::cout << (nan(in) ? "nanf" : "impossible") << std::endl;
 	}
-	d = std::strtod(in.c_str(), &s);
-	if (*s)
+
+	std::cout << "double: ";
+	try
 	{
-		std::cout << "impossible" << std::endl;
-		return ;
+		double d = s_double(in);
+		std::cout << std::fixed << std::setprecision(getPrecision(in)) << d << std::endl;
 	}
-	if(d > FLT_MAX || d < -FLT_MAX)
+	catch (const std::exception& e)
 	{
-		if(d > FLT_MAX)
-			std::cout << "+";
-		else
-			std::cout << "-";
-		std::cout << "inff" << std::endl;
-		return ;
+		std::cout << (nan(in) ? "nan" : "impossible") << std::endl;
 	}
-	else
-		std::cout << static_cast<float>(d) << "f" << std::endl;
 }
 
-void	ScalarConverter::s_double(std::string const &in)
+char	ScalarConverter::s_char(std::string const &in)
+{
+	if (s_double(in) || s_double(in) == 0)
+		return	static_cast<char>(s_double(in));
+	else 
+		throw	std::invalid_argument("Invalid char conversion");
+}
+
+int	ScalarConverter::s_int(std::string const &in)
+{
+	try
+	{
+		if (nan(in))
+			throw std::invalid_argument("Invalid int conversion");
+		return	static_cast<int>(s_double(in));
+	}
+	catch (const std::exception &e)
+	{
+		throw std::invalid_argument("Invalid int conversion");
+	}
+}
+
+float	ScalarConverter::s_float(std::string const &in)
+{
+	try
+	{
+		return	static_cast<float>(s_double(in));
+	}
+	catch (const std::exception &e)
+	{
+		throw std::invalid_argument("Invalid float conversion");
+	}
+}
+
+double	ScalarConverter::s_double(std::string const &in)
 {
 	char	*s;
-	double	d;
-	
-	std::cout << "double: ";
-	if (in == "nan" || in == "nanf")
+	try
 	{
-		std::cout << "nan" << std::endl;
-		return ;
+		double	d = std::strtod(in.c_str(), &s);
+		if (*s && (*s != 'f' || (*s == 'f' && strlen(s) > 1)))
+			throw std::exception();
+		return	d;
 	}
-	if (t == "char")
+	catch (const std::exception &e)
 	{
-		std::cout << static_cast<double>(in.front()) << std::endl;
-		return ;
+		throw std::invalid_argument("Invalid double conversion");
 	}
-	d = std::strtod(in.c_str(), &s);
-	if (*s)
-	{
-		std::cout << "impossible" << std::endl;
-		return ;
-	}
-	if(d > DBL_MAX || d < -DBL_MAX)
-	{
-		if(d > DBL_MAX)
-			std::cout << "+";
-		else
-			std::cout << "-";
-		std::cout << "inf" << std::endl;
-		return ;
-	}
+}
+
+int	ScalarConverter::getPrecision(std::string const &in)
+{
+	size_t dotPos = in.find('.');
+	if (dotPos != std::string::npos)
+		return	in.length() - dotPos - 1;
 	else
-		std::cout << static_cast<double>(d) << std::endl;
+		return	1;
+}
+
+bool	ScalarConverter::nan(std::string const &in)
+{
+	char		*s;
+
+	if (in == "nan" || in == "nanf")
+		return	true;
+	if (in.size() > 1)
+	{
+		std::strtod(in.c_str(), &s);
+		if (*s && (*s != 'f' || (*s == 'f' && strlen(s) > 1)))
+			return	false;
+	}
+	return	false;
 }

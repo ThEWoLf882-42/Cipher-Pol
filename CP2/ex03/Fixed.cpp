@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 15:05:13 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/13 15:05:14 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,12 @@ Fixed::Fixed(Fixed const &f)
 Fixed	&Fixed::operator=(Fixed const &f)
 {
 	setRawBits(f.getRawBits());
-	return *this;
+	return	*this;
 }
 
 int		Fixed::getRawBits(void) const
 {
-	return this->fpn;
+	return	this->fpn;
 }
 
 void	Fixed::setRawBits(int const raw)
@@ -56,12 +56,12 @@ void	Fixed::setRawBits(int const raw)
 
 float	Fixed::toFloat(void) const
 {
-	return ((float)fpn / (float)(1 << frb));
+	return	((float)fpn / (float)(1 << frb));
 }
 
 int		Fixed::toInt(void) const
 {
-	return (fpn >> frb);
+	return	(fpn >> frb);
 }
 
 
@@ -118,50 +118,50 @@ float	Fixed::operator/(Fixed const &f)
 Fixed	Fixed::operator++()
 {
 	fpn++;
-	return *this;
+	return	*this;
 }
 
 Fixed	Fixed::operator--()
 {
 	fpn--;
-	return *this;
+	return	*this;
 }
 
 Fixed	Fixed::operator++(int)
 {
 	Fixed	t = *this;
 	fpn++;
-	return t;
+	return	t;
 }
 
 Fixed	Fixed::operator--(int)
 {
 	Fixed	t = *this;
 	fpn--;
-	return t;
+	return	t;
 }
 
 const Fixed	&Fixed::min(Fixed const &fi,Fixed const &se)
 {
-	return (Fixed)fi <= (Fixed)se ? fi : se;
+	return	(Fixed)fi <= (Fixed)se ? fi : se;
 }
 
 Fixed	&Fixed::min(Fixed &fi, Fixed &se)
 {
-	return fi <= se ? fi : se;
+	return	fi <= se ? fi : se;
 }
 
 const Fixed	&Fixed::max(Fixed const &fi,Fixed const &se)
 {
-	return (Fixed)fi >= (Fixed)se ? fi : se;
+	return	(Fixed)fi >= (Fixed)se ? fi : se;
 }
 
 Fixed	&Fixed::max(Fixed &fi, Fixed &se)
 {
-	return fi >= se ? fi : se;
+	return	fi >= se ? fi : se;
 }
 
 std::ostream	&operator<<(std::ostream &str, Fixed const &fn)
 {
-	return str << fn.toFloat();
+	return	str << fn.toFloat();
 }

@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 17:36:17 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/08 18:52:56 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ int	main(int ac, char **av)
 		if (ifs.fail())
 		{
 			std::cout << "Can't open " << name << std::endl;
-			return (1);
+			return	(1);
 		}
 		
 		std::ofstream	ofs(name + ".replace");
 		if (ofs.fail())
 		{
 			std::cout << "Can't open " << name + ".replace" << std::endl;
-			return (1);
+			return	(1);
 		}
 		
 		std::string		in;

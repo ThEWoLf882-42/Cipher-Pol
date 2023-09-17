@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 22:11:01 by agimi             #+#    #+#             */
-/*   Updated: 2023/08/15 14:43:52 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,13 @@ Fixed	&Fixed::operator=(Fixed const &f)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	setRawBits(f.getRawBits());
-	return *this;
+	return	*this;
 }
 
 int		Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
-	return this->fpn;
+	return	this->fpn;
 }
 
 void	Fixed::setRawBits(int const raw)
@@ -63,15 +63,15 @@ void	Fixed::setRawBits(int const raw)
 
 float	Fixed::toFloat(void) const
 {
-	return ((float)fpn / (float)(1 << frb));
+	return	((float)fpn / (float)(1 << frb));
 }
 
 int		Fixed::toInt(void) const
 {
-	return (fpn >> frb);
+	return	(fpn >> frb);
 }
 
 std::ostream	&operator<<(std::ostream &str, Fixed const &fn)
 {
-	return str << fn.toFloat();
+	return	str << fn.toFloat();
 }

@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 15:57:16 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/07 16:48:58 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ int main()
 		club.setType("some other type of club");
 		jim.attack();
 	}
-	return 0;
+	return	0;
 }

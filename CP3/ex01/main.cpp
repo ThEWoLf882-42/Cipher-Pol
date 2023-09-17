@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 17:12:50 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/27 13:33:33 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ int main()
 	b.guardGate();
 	b.attack("BIll clo");
 	c.guardGate();
-	return (0);
+	return	(0);
 }

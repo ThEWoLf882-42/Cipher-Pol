@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 15:36:45 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/14 12:51:33 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,5 @@ int main(void)
 	}
 	catch (std::exception &e)
 		{std::cout << "Caught exception: " << e.what() << std::endl;}
-	return (0);
+	return	(0);
 }

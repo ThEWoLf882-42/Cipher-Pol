@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 20:22:15 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/06 20:41:23 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ Zombie*	zombieHorde(int N, std::string name)
 	ho = new Zombie[N];
 	for (int i = 0; i < N; i++)
 		ho[i].setName(name);
-	return ho;
+	return	ho;
 }

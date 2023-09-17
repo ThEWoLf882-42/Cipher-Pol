@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 14:03:54 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/14 12:33:05 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,27 +42,27 @@ Form::~Form(void)
 Form	&Form::operator=(Form const &f)
 {
 	issig = f.issig;
-	return *this;
+	return	*this;
 }
 
 const std::string	Form::getName(void) const
 {
-	return name;
+	return	name;
 }
 
 int	Form::getsGrade(void) const
 {
-	return sgra;
+	return	sgra;
 }
 
 int	Form::geteGrade(void) const
 {
-	return egra;
+	return	egra;
 }
 
 bool	Form::getisSigned(void) const
 {
-	return issig;
+	return	issig;
 }
 
 void	Form::beSigned(Bureaucrat &b)
@@ -75,16 +75,16 @@ void	Form::beSigned(Bureaucrat &b)
 
 const char	*Form::GradeTooHighException::what(void) const throw()
 {
-	return "Grade Too High";
+	return	"Grade Too High";
 }
 
 const char	*Form::GradeTooLowException::what(void) const throw()
 {
-	return "Grade Too Low";
+	return	"Grade Too Low";
 }
 
 std::ostream	&operator<<(std::ostream &str, Form const &f)
 {
-	return str << "Name: " << f.getName() << "\n\tis signed: " << f.getisSigned() 
+	return	str << "Name: " << f.getName() << "\n\tis signed: " << f.getisSigned() 
 		<< "\n\tsign grade: " << f.getsGrade() << "\n\texecute grade: " << f.geteGrade();
 }

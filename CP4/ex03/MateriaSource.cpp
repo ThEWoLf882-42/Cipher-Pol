@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 08:57:05 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/27 12:38:05 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,14 @@ void	MateriaSource::learnMateria(AMateria *ma)
 	if(!ma)
 	{
 		std::cout << "Nothing to learn" << std::endl;
-		return ;
+		return	;
 	}
 	while (inv[++i] && i < 4)
 		;
 	if (i >= 4)
 	{
 		std::cout << "No slot available" << std::endl;
-		return ;
+		return	;
 	}
 	inv[i] = ma;
 	std::cout << "Learned materia " << ma->getType()

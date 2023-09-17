@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 18:18:04 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/25 16:58:50 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ DiamondTrap	&DiamondTrap::operator=(DiamondTrap const &dt)
 	AD = dt.AD;
 	std::cout << "DiamondTrap Copy assignment operator constructor called" << std::endl;
 	
-	return *this;
+	return	*this;
 }
 
 void	DiamondTrap::attack(const std::string& target)

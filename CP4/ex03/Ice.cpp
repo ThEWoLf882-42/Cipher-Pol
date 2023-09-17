@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 18:49:02 by agimi             #+#    #+#             */
-/*   Updated: 2023/07/27 12:39:12 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/16 14:36:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Ice::~Ice(void)
 Ice	&Ice::operator=(Ice const &ic)
 {
 	type = ic.type;
-	return *this;
+	return	*this;
 }
 
 std::string	const & Ice::getType() const
