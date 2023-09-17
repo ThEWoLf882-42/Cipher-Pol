@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 11:03:36 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/16 16:46:21 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/17 11:16:45 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,7 @@ void	ScalarConverter::convert(std::string const &in) {
 	std::cout << "double: ";
 	try
 	{
-		double d = s_double(in);
-		std::cout << std::fixed << std::setprecision(getPrecision(in)) << d << std::endl;
+		std::cout << std::fixed << std::setprecision(getPrecision(in)) << s_double(in) << std::endl;
 	}
 	catch (const std::exception& e)
 	{
@@ -84,8 +83,9 @@ void	ScalarConverter::convert(std::string const &in) {
 
 char	ScalarConverter::s_char(std::string const &in)
 {
-	if (s_double(in) || s_double(in) == 0)
-		return	static_cast<char>(s_double(in));
+	double	d = s_double(in);
+	if ((d || d == 0) && (d <= CHAR_MAX && d >= CHAR_MIN))
+		return	static_cast<char>(d);
 	else 
 		throw	std::invalid_argument("Invalid char conversion");
 }
@@ -96,7 +96,10 @@ int	ScalarConverter::s_int(std::string const &in)
 	{
 		if (nan(in))
 			throw std::invalid_argument("Invalid int conversion");
-		return	static_cast<int>(s_double(in));
+		double	d = s_double(in);
+		if (d > INT_MAX || d < INT_MIN)
+			throw std::invalid_argument("Invalid int conversion");
+		return	static_cast<int>(d);
 	}
 	catch (const std::exception &e)
 	{
@@ -121,6 +124,8 @@ double	ScalarConverter::s_double(std::string const &in)
 	char	*s;
 	try
 	{
+		if (in.size() == 1 && !std::isdigit(in[0]))
+			return	static_cast<double>(in[0]);
 		double	d = std::strtod(in.c_str(), &s);
 		if (*s && (*s != 'f' || (*s == 'f' && strlen(s) > 1)))
 			throw std::exception();
@@ -134,7 +139,7 @@ double	ScalarConverter::s_double(std::string const &in)
 
 int	ScalarConverter::getPrecision(std::string const &in)
 {
-	size_t dotPos = in.find('.');
+	size_t	dotPos = in.find('.');
 	if (dotPos != std::string::npos)
 		return	in.length() - dotPos - 1;
 	else

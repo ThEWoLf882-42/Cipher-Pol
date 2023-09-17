@@ -1,4 +1,4 @@
-NAME = serialize
+NAME = identify
 
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
@@ -6,13 +6,18 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 INCLUDES = -I$(HEADERS_DIRECTORY)
 
 HEADERS_DIRECTORY = ./
-HEADERS_LIST =	Serializer.hpp \
-				Data.hpp \
+HEADERS_LIST =	Base.hpp \
+				A.hpp \
+				B.hpp \
+				C.hpp \
 
 HEADERS = $(addprefix $(HEADERS_DIRECTORY), $(HEADERS_LIST))
 
 SOURCES_DIRECTORY = ./
-SOURCES_LIST =	Serializer.cpp \
+SOURCES_LIST =	Base.cpp \
+				A.cpp \
+				B.cpp \
+				C.cpp \
 				main.cpp \
 
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))

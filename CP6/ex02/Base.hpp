@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serializer.hpp                                     :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/17 10:16:55 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/17 10:39:57 by agimi            ###   ########.fr       */
+/*   Created: 2023/09/17 10:45:39 by agimi             #+#    #+#             */
+/*   Updated: 2023/09/17 10:46:32 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Data.hpp"
-
-class	Serializer
+class	Base
 {
-	private:
-		Serializer();
 	public:
-		~Serializer();
-		Serializer(Serializer const &s);
-		Serializer	&operator=(Serializer const &s);
-
-		static uintptr_t	serialize(Data* ptr);
-		static Data*		deserialize(uintptr_t raw);
+		virtual	~Base();
 };
