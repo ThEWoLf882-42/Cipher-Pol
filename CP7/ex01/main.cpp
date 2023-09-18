@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 11:19:20 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/18 11:52:25 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/18 11:54:38 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ int	main()
 
 	int	i[] = {'a', 'b', 'c'};
 	for (size_t j = 0; j < 3; j++)
-		std::cout << "i = " << i[j] << std::endl;
+		std::cout << "i = " << i[j] << " c: " << static_cast<char>(i[j]) << std::endl;
 	std::cout << std::endl;
 
 	::iter(i, 3, Upper);
 	for (size_t j = 0; j < 3; j++)
-		std::cout << "i = " << i[j] << std::endl;
+		std::cout << "i = " << i[j] << " c: " << static_cast<char>(i[j]) << std::endl;
 }
