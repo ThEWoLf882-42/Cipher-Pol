@@ -6,61 +6,32 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 12:40:54 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/18 13:20:05 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/18 13:44:58 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
 
-#define MAX_VAL 9
-
 int main()
 {
-    Array<int> numbers(MAX_VAL);
-    int* mirror = new int[MAX_VAL];
-    srand(time(NULL));
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        const int value = rand();
-        numbers[i] = value;
-        mirror[i] = value;
+    Array<int> a(5);
+
+    for (size_t i = 0; i < a.size(); i++)
+        a[i] = i * 2;
+
+    std::cout << "Elements of a: ";
+    for (size_t i = 0; i < a.size(); i++) 
+		std::cout << a[i] << " ";
+    std::cout << std::endl;
+
+    try
+	{
+        a[10] = 42;
     }
-	
-    {
-        Array<int> tmp = numbers;
-        Array<int> test(tmp);
+	catch (const std::exception& e)
+	{
+        std::cerr << e.what() << std::endl;
     }
 
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        if (mirror[i] != numbers[i])
-        {
-            std::cerr << "not same value" << std::endl;
-            return 1;
-        }
-    }
-    try
-    {
-        numbers[-2] = 0;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-    try
-    {
-        numbers[MAX_VAL] = 0;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-	
-    for (int i = 0; i < MAX_VAL; i++)
-    {
-        numbers[i] = rand();
-    }
-	
-    delete [] mirror;
     return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 12:40:22 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/18 13:12:09 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/18 13:43:57 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,15 @@ class	Array
 		}
 		Array	&operator=(Array const &ar)
 		{
-			if (a)
-				delete[] a;
-			a = new T[ar.size()];
-			s = ar.size();
-			for (size_t i = 0; i < ar.size(); i++)
-				a[i] = ar.a[i];
+			if (this != ar)
+			{
+				if (a)
+					delete[] a;
+				a = new T[ar.size()];
+				s = ar.size();
+				for (size_t i = 0; i < ar.size(); i++)
+					a[i] = ar.a[i];
+			}
 			return	*this;
 		}
 
