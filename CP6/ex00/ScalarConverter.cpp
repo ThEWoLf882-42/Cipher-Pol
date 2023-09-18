@@ -6,13 +6,11 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 11:03:36 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/17 11:16:45 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/18 16:20:29 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
-
-std::string	ScalarConverter::t = "";
 
 ScalarConverter::ScalarConverter()
 {
