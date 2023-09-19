@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 12:40:22 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/18 13:43:57 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/19 20:42:27 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ class	Array
 		}
 		Array	&operator=(Array const &ar)
 		{
-			if (this != ar)
+			if (this != &ar)
 			{
 				if (a)
 					delete[] a;

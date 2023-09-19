@@ -6,31 +6,40 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 11:19:20 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/18 11:54:38 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/19 20:46:56 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iter.hpp"
-template<typename C>
-void	Upper(C &c)
+
+class Awesome
 {
-	c = std::toupper(static_cast<char>(c));
+  public:
+    Awesome( void ) : _n( 42 ) { return; }
+    int get( void ) const { return this->_n; }
+  private:
+    int _n;
+};
+
+std::ostream & operator<<( std::ostream & o, Awesome const & rhs )
+{
+  o << rhs.get();
+  return o;
 }
 
-int	main()
+template< typename T >
+void print( T& x )
 {
-	std::string	a = "My Number Is 69";
-	std::cout << "a = " << a << std::endl;
+  std::cout << x << std::endl;
+  return;
+}
 
-	::iter(&a[0], a.size(), Upper);
-	std::cout << "a = " << a << std::endl;
+int main() {
+  int tab[] = { 0, 1, 2, 3, 4 };
+  Awesome tab2[5];
 
-	int	i[] = {'a', 'b', 'c'};
-	for (size_t j = 0; j < 3; j++)
-		std::cout << "i = " << i[j] << " c: " << static_cast<char>(i[j]) << std::endl;
-	std::cout << std::endl;
+  iter( tab, 5, print<const int> );
+  iter( tab2, 5, print<Awesome> );
 
-	::iter(i, 3, Upper);
-	for (size_t j = 0; j < 3; j++)
-		std::cout << "i = " << i[j] << " c: " << static_cast<char>(i[j]) << std::endl;
+  return 0;
 }
