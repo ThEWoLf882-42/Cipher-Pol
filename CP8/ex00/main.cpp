@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 14:45:23 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/18 15:30:28 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/21 15:00:53 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,22 @@ int main()
     v.push_back(42);
 	
 	try
-    {
-		::easyfind(v, 5);
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-	
-    try
-    {
-		::easyfind(v, 88);
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
+  {
+  ::easyfind(v, 5);
+  }
+  catch(const std::exception& e)
+  {
+    std::cerr << e.what() << '\n';
+  }
 
-    return 0;
+  try
+  {
+  ::easyfind(v, 88);
+  }
+  catch(const std::exception& e)
+  {
+    std::cerr << e.what() << '\n';
+  }
+
+  return 0;
 }

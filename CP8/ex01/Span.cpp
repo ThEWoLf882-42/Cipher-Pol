@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 15:32:49 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/18 17:18:09 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/21 16:17:15 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,36 +50,30 @@ void	Span::addNumber(std::vector<int>::iterator b, std::vector<int>::iterator e)
     v.insert(v.end(), b, e);
 }
 
-void	Span::addNumber(int st, int en)
-{
-	if (v.size() + abs(en - st) > n)
-		throw std::out_of_range("Span is full");
-	for (int i = (st < en ? st : en); i != (st < en ? en : st); i++)
-	{	std::cout << i << std::endl;
-		v.push_back(i);}
-}
-
 int	Span::shortestSpan()
 {
-    if (v.size() < 2)
+    if (v.size() <= 1)
         throw std::out_of_range("Span is not large enough");
-    std::vector<int> t = v;
-    std::sort(t.begin(), t.end());
-    std::vector<int>::iterator i;
-    int shor = t.at(1) - t.at(0);
-    for (i = t.begin() ; i != t.end(); ++i)
+
+    int span;
+    int sho = INT_MAX;
+    std::sort(v.begin(), v.end());
+
+    for (size_t i = 1; i < v.size(); ++i)
     {
-        if (shor > *i - *(i - 1))
-            shor = *i - *(i - 1);
+        span = v[i] - v[i - 1];
+        if (span < sho)
+            sho = span;
     }
-    return (shor);
+
+    return  sho;
 }
 
 int Span::longestSpan()
 {
-    if (v.size() < 2)
+    if (v.size() <= 1)
         throw std::out_of_range("Span is not large enough");
-    int mx = *std::max_element(v.begin(), v.end());
-    int mi = *std::min_element(v.begin(), v.end());
-    return (mx - mi);
+    
+    std::sort(v.begin(), v.end());
+    return  v[v.size() - 1] - v[0];
 }

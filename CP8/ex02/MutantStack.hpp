@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:22:05 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/18 17:48:28 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/21 16:50:33 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ template <typename T>
 class	MutantStack : public std::stack<T>
 {
 	public:
-		typedef typename std::stack<T>::container_type::iterator iterator;
+		typedef typename std::stack<T>::container_type::reverse_iterator iterator;
 		MutantStack() : std::stack<T>()
 		{
 		}
@@ -38,10 +38,10 @@ class	MutantStack : public std::stack<T>
 		}
 		iterator begin()
 		{
-			return	this->c.begin();
+			return	this->c.rbegin();
 		}
 		iterator end()
 		{
-			return	this->c.end();
+			return	this->c.rend();
 		}
 };
