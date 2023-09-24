@@ -6,18 +6,18 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:44:34 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/24 12:15:53 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/24 13:21:41 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
 
-BitcoinExchange::BitcoinExchange()
+BitcoinExchange::BitcoinExchange() : ln(0)
 {
 }
 
 BitcoinExchange::BitcoinExchange(std::string const &f) :
-	file(f)
+	file(f), ln(0)
 {
 	if (file.is_open())
 	{
@@ -162,9 +162,7 @@ void	BitcoinExchange::parse(std::string const l)
 		m.insert(std::make_pair(da, std::strtod(pr.c_str(), NULL)));
 	}
 	else 
-	{
-		throw std::runtime_error("Invalid data format in line: " + l);
-	}
+		throw_lin();
 }
 
 void	BitcoinExchange::init_data()
@@ -199,6 +197,15 @@ void	BitcoinExchange::init_data()
 	data.close();
 }
 
+void	BitcoinExchange::throw_lin()
+{
+	std::string sln;
+	std::stringstream t;
+	t << ln;
+	t >> sln;
+	throw std::runtime_error("Invalid data format in line: " + sln);
+}
+
 void	BitcoinExchange::read_input()
 {
 	std::string l;
@@ -206,6 +213,7 @@ void	BitcoinExchange::read_input()
 	if (file.is_open())
 	{
 		std::getline(file, l);
+		ln++;
 		if (l != "date | value")
 		{
 			std::cerr << "Error: Bad file format" << std::endl;
@@ -213,6 +221,7 @@ void	BitcoinExchange::read_input()
 		}
 		while (std::getline(file, l))
 		{
+			ln++;
 			try
 			{
 				line_check(l, 0);
@@ -222,6 +231,8 @@ void	BitcoinExchange::read_input()
 				std::string			pr;
 				ss >> da;
 				ss >> pr;
+				if (pr != "|")
+					throw_lin();
 				ss >> pr;
 
 				std::cout << da << " => " << pr << " = ";

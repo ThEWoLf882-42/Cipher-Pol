@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:44:42 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/24 12:03:01 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/24 13:20:37 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class	BitcoinExchange
 	private:
 		std::ifstream					file;
 		std::map<std::string, double>	m;
+		int								ln;
 		BitcoinExchange();
 		void	init_data();
 		void	read_input();
@@ -32,6 +33,7 @@ class	BitcoinExchange
 		int		month_date(int year, int month);
 		int		check_date(const std::string& da);
 		double	gprice(std::string da);
+		void	throw_lin();
 	public:
 		BitcoinExchange(std::string	const &f);
 		~BitcoinExchange();
