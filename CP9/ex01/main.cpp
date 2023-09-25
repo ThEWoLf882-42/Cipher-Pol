@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RPN.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 17:46:39 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/25 14:35:44 by agimi            ###   ########.fr       */
+/*   Created: 2023/09/24 15:18:39 by agimi             #+#    #+#             */
+/*   Updated: 2023/09/25 14:38:35 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "RPN.hpp"
 
-#include <iostream>
-#include <sstream>
-#include <stack>
-
-class	RPN
+int	main(int ac, char **av)
 {
-	private:
-		RPN();
-		std::stack<float>	rpn;
-		std::string			in;
-		void	read_in();
-		void	cal();
-	public:
-		RPN(std::string const &inp);
-		~RPN();
-		RPN(RPN const &r);
-		RPN	&operator=(RPN const &r);
-		
-};
+	if	(ac == 2)
+		RPN	rpn(av[1]);
+	else
+		std::cerr << "usage: ./RPN [expresion]" << std::endl;
+}
