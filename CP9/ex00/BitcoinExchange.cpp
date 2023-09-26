@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:44:34 by agimi             #+#    #+#             */
-/*   Updated: 2023/09/24 13:21:41 by agimi            ###   ########.fr       */
+/*   Updated: 2023/09/26 15:17:27 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,8 @@ BitcoinExchange	&BitcoinExchange::operator=(BitcoinExchange const &b)
 double	BitcoinExchange::gprice(std::string da)
 {
 	std::map<std::string, double>::iterator it = m.lower_bound(da);
-	if (it != m.begin()) {
+	if (it != m.begin())
+	{
 		if (it->first != da)
 			--it;
 		return it->second;
